@@ -13,7 +13,7 @@ test('signup API works correctly', function () {
         'email' => 'testuser@gmail.com',
         'password' => '123456',
         'address' => 'Some Address',
-        'image' => \Illuminate\Http\UploadedFile::fake()->image('test.jpg')
+        'image' => UploadedFile::fake()->create('test.jpg')
     ]);
 
     $response->assertStatus(200)
